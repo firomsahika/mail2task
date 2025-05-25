@@ -21,7 +21,7 @@ export default async function HomePage(){
         </h1>
 
         {tasks.length === 0 ? (
-          <p className="text-center text-gray-600">
+          <p className="text-center  text-gray-600">
             No tasks yet. Send an email to your Postmark address to get started!
           </p>
         ) : (

@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
 
   const data = await req.json();
 
-  console.log("Data from Postmark", data)
+  console.log("Data from Postmark", data);
   
   const email = parsePostmarkEmail(data);
 
@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
       email.Subject || 'No subject',
       email.TextBody,
       email.From,
-      email.RecievedAt
+      email.ReceivedAt
     );
     return NextResponse.json({ message: 'Email Created', task });
   } catch (error) {
